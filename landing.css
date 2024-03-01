@@ -1,0 +1,66 @@
+section.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+:root {
+    --header-height: 3rem;
+    --first-color: rgb(246, 164, 252);
+    --second-color: #c157aa;
+    --third-color: #a83e91; 
+    --white-color: #FCF8F8;
+    --black-color:  #000000;
+}
+
+.wrapper {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(asset/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.landing-img img {
+    max-width: 460px;
+    height: auto;
+    width: 110%;
+    
+}
+
+.button {
+    background: var(--main-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px; /* Sesuaikan ukuran padding sesuai kebutuhan */
+    border-radius: 1px;
+    font-size: 0.5px; /* Sesuaikan ukuran font sesuai kebutuhan */
+}
+
+.btn:hover {
+    transform: scale(0.9);
+    background-color: rgb(0, 0, 0)( 41, 185); 
+};
+
+footer {
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.5 rem;
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--black-color) 30%, var(--black-color) 200%);
+}
+
+span {
+    color: var(--white-color);
+}

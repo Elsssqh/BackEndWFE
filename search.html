@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookApp">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../UASSSFE/asset/logoUASFE.png">
+    <title>ng e-Asdos Bookstore</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/8f441d49ca.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-controller="BookController">
+    <header class="sticky">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="#">NG e-Asdos BookStore</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav ms-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="landing.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="home.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="ourBooks.html">Our Books</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="search.html">Search</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="trolley.html">Trolley</a>
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="search" id="search">
+        <div class="container">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search..." ng-model="searchQuery">
+                <select id="category-select">
+                    <option value="all">All</option>
+                    <option value="title">Title</option>
+                    <option value="genre">Genre</option>
+                    <option value="author">Author</option>
+                    <option value="publisher">Publisher</option>
+                </select>
+                <br>
+                <center><button ng-click="searchBooks()">Search</button></center>
+            </form>
+            <ul id="bookList">
+                <li ng-repeat="book in books">
+                    <img ng-src="{{book.thumbnail}}" alt="{{book.title}} Cover">
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.authors.join(', ')}}</p>
+                    <p>{{book.description}}</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="search.js"></script>
+    <script src="script-angular.js"></script>
+</body>
+
+</html>

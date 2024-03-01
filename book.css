@@ -1,0 +1,191 @@
+/*----FONT---*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --header-height: 3rem;
+
+    /*===== Color Palette =====*/
+    --first-color: rgb(246, 164, 252);
+    --second-color: #c157aa;
+    --third-color: #a83e91; 
+    --white-color: #FCF8F8;
+    
+    /*===== Font and typography =====*/
+    --big-font: 'Courgette';
+    --head-font: 'sans-serif';
+    --big-font-size: 2.5rem;
+    --normal-font-size: .938rem;
+}
+
+header.sticky {
+    position: flex;
+    width: 100%;
+    height: 60px;
+    color: white;
+    text-align: center;
+}
+
+body {
+    background-image: url('asset/background\ \(2\).jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: var(--white-color);
+}
+
+#bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.book {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.book:hover {
+    transform: scale(1.1);
+}
+
+
+.navbar {
+    background-image: url('asset/background\ \(2\).jpg') !important;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.navbar-brand {
+    font-family: 'Courgette', sans-serif;
+    color: var(--white-color) !important;
+    margin: 0 20px; 
+
+}
+
+.navbar-brand:hover {
+    border: 2px solid transparent;
+    border-radius: 20px;
+    color: var(--white-color);
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+.navbar-nav {
+    font-family: 'Courgette', sans-serif;
+    color: var(--white-color);
+    background-color: rgba(255, 255, 255, 0.3); 
+    border: 2px solid transparent; 
+    border-radius: 50px;
+    transition: background-color 0.3s ease; 
+    
+}
+
+.navbar-nav:hover {
+    border: 2px solid transparent;
+    border-radius: 50px;
+    
+}
+
+.nav-item {
+    color: var(--white-color);
+    margin : 0 20px;
+   
+}
+
+.nav-item:hover{
+    background-color: rgba(255, 255, 255, 0.3); 
+    transition: background-color 0.3s ease; 
+    border-radius: 50px;
+    margin-left: 10px;
+    
+     transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+    
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.overlay img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+section.buku {
+    height: 170vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    background-image: url('asset/background\ \(2\).jpg') !important;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+  
+}
+
+.overlay-content p {
+    font-family: var(--head-font); /* Apply sans-serif font to overlay description */
+    color: var(--white-color);
+}
+
+.book {
+    border: 1px transparent;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    font-family: var(--head-font); /* Apply sans-serif font to book description */
+    color: var(--white-color);
+}
+
+.add-to-trolley {
+    margin-top: 10px;
+}
+
+.add-to-trolley button {
+    padding: 10px 20px;
+    background-color: rgb(170, 76, 175);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-trolley button:hover {
+    background-color:  rgb(170, 76, 175);
+}
+
+.book h3 {
+    font-size: 14px; /* Adjust the font size to your preference */
+    margin-top: 5px; /* Optional: Add margin to separate title from other elements */
+}
