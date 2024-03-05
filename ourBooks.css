@@ -35,7 +35,8 @@ body {
     background-repeat: repeat;
     background-position: right top;
     background-color: cover;
-    color: var(--fourth-color);
+    width: auto;
+    height: 100vh;
 }
 
 #bookshelf {
