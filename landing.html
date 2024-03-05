@@ -20,6 +20,7 @@
             <img src="asset/PagePetal.png" alt="logo">
         </div>
 
+        
         <!--
         <div class="button">
             <a href="home.html" class="btn"><img src="asset/PagePetal.png" alt="logo"></a> 
@@ -32,8 +33,8 @@
     <footer>
         <div class="info-column">
             <div class="info-container">
-                <center><b>© Created by : PagePetal </center>
-                <center>© Designed by : PagePetal </b></center>
+                <center><span2><b>© Created by : PagePetal</b></span2></center>
+                <center><span2><b>© Designed by : PagePetal</b></span2></center>
             </div>
             </div>
     </footer>
@@ -42,67 +43,19 @@
 
 
     <!-- Ini login page dan sign in page-->
-    <button class="open-button" onclick="openForm()">Login</button>
-  <div class="form-popup" id="myForm">
-  <form onsubmit="return validateLogin()" class="form-container">
-    <h1>Login</h1>
+    <button class="open-button" onclick="openForm()"><b><span>Login</span></b></button>
+    <div class="form-popup" id="myForm">
+    <form onsubmit="return validateLogin()" class="form-container">
+    <h1><center><span2>Login</span2></center></h1>
 
-    <label for="email"><b>Email</b></label>
+    <label for="email"><b><span2>Email</span2></b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-    <label for="psw"><b>Password</b></label>
+    <label for="psw"><b><span2>Password</span2></b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-
-
-
-<script>
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-
-  function validateLogin() {
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("psw").value;
-
-    // Check if email and password match the desired values
-    if (email === "pagepetal@gmail.com" && password === "pagepetal") {
-      alert("Login successful!");
-      
-      // Redirect to home.html
-      window.location.href = "home.html";
-      return false; // Prevent form submission (not necessary as we're redirecting)
-
-    } else {
-      alert("Invalid email or password. Please try again.");
-      return false; // Prevent form submission
-    }
-  }
-
-</script>
-
-
-  <button class="open-button" onclick="openForm()"><span>Login</span></button>
-  <div class="form-popup" id="myForm">
-  <form onsubmit="return validateLogin()" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    <button type="submit" class="btn"><b>Login</b></button>
+    <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
   </form>
 </div>
 

@@ -56,7 +56,6 @@ section.landing {
 
 .button {
     background: var(--main-color);
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,26 +80,16 @@ footer {
 }
 
 .info-column {
-  background-color: #e99fb5;
+  background-color: var(--white-color);
   display: flex;
   justify-content: space-around;
   width: 100%;
-
-  
 }
 
 .info-container {
   text-align: center;
   margin: 20px;
 }
-
-
-
-
-
-
-
-
 
 /*LOGIN FORM --WIDY*/
 body {font-family:'Courgette', sans-serif;}
@@ -119,6 +108,8 @@ body {font-family:'Courgette', sans-serif;}
   right: 28px;
   width: 280px;
   border-radius: 12px; 
+  transform: scale(0.9);
+
 }
 
 /* The popup form - hidden by default */
@@ -127,20 +118,26 @@ body {font-family:'Courgette', sans-serif;}
   position: fixed;
   bottom: 0;
   right: 15px;
-  border: 3px solid #f1f1f1;
+  border: 0px solid var(--white-color);
   z-index: 9;
+  left: 58%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Add styles to the form container */
 .form-container {
   max-width: 300px;
   padding: 10px;
-  background-color: white;
+  border-radius: 12px; 
+  background-color: rgba(255, 255, 255, 0.3);
+  
 }
 
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
   width: 100%;
+  border-radius: 12px;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -156,6 +153,7 @@ body {font-family:'Courgette', sans-serif;}
 /* Set a style for the submit/login button */
 .form-container .btn {
   background-color: var(--fourth-color);
+  border-radius: 12px;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -168,13 +166,19 @@ body {font-family:'Courgette', sans-serif;}
 span {
   font-family: 'Courgette', sans-serif;
 }
+
+span2 {
+  color: var(--fourth-color);
+}
+
 /* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: var(--fourth-color);
+  border-radius: 12px;
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover .open-button{
   opacity: 1;
 }
 
