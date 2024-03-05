@@ -10,10 +10,10 @@
     --header-height: 3rem;
 
     /*===== Color Palette =====*/
-    --first-color: rgb(246, 164, 252);
-    --second-color: #c157aa;
-    --third-color: #a83e91; 
-    --white-color: #FCF8F8;
+    --first-color: rgb(10, 8, 10);
+    --second-color: #e0b36b;
+    --third-color: #c25e24; 
+    --fourth-color: #a36a6a;
     
     /*===== Font and typography =====*/
     --big-font: 'Courgette';
@@ -26,23 +26,24 @@ header.sticky {
     position: flex;
     width: 100%;
     height: 60px;
-    color: white;
+    color: black;
     padding: 10px;
     text-align: center;
 }
 
 body {
-    background-image: url('asset/background\ \(2\).jpg');
+    background-image: url('asset/gradienbg.png');
     background-repeat: no-repeat;
     background-position: right top;
-    color: var(--white-color);
+    background-size: cover;
+    color: var(--fourth-color);
 }
 
 h1 {
     font-family: 'Courgette', sans-serif;
     text-align: center; /* Center the text horizontally */
     padding-top: 10rem;
-    color: var(--white-color);
+    color: var(--fourth-color);
 }
 
 h3 {
@@ -54,18 +55,19 @@ h3 {
     font-family: sans-serif;
     text-align: center; /* Center the text horizontally */
     padding-top: 1rem; /* Adjusted the padding-top for spacing */
-    color: var(--white-color);
+    color: var(--fourth-color);
 }
 
 .navbar {
-    background-image: url('asset/background\ \(2\).jpg') !important;
+    background-image: url('asset/grbg2.png') !important;
     background-repeat: no-repeat;
     background-position: right top;
+    background-size: cover;
 }
 
 .navbar-brand {
     font-family: 'Courgette', sans-serif;
-    color: var(--white-color)!important; 
+    color: var(--first-color)!important; 
     margin: 0 20px; 
 
 }
@@ -73,14 +75,14 @@ h3 {
 .navbar-brand:hover {
     border: 2px solid transparent;
     border-radius: 20px;
-    color: var(--white-color);
+    color: var(--fourth-color);
     transform: scale(1.1); 
     transition: transform 0.3s ease; 
 }
 
 .navbar-nav {
     font-family: 'Courgette', sans-serif;
-    color: var(--white-color);
+    color: var(--fourth-color);
     background-color: rgba(255, 255, 255, 0.3); 
     border: 2px solid transparent; 
     border-radius: 50px;
@@ -95,7 +97,7 @@ h3 {
 }
 
 .nav-item {
-    color: var(--white-color);
+    color: var(--fourth-color);
     margin : 0 20px;
    
 }
@@ -113,10 +115,10 @@ h3 {
 
 
 footer {
-    color: var(--third-color);
+    color: var(--second-color);
     text-align: center;
-    background-image: url('asset/background\ \(2\).jpg');
-    background: linear-gradient(to bottom,  rgb(11, 2, 10)) 30%,  rgb(211, 115, 196) 200%;
+    background-image: url('asset/footerbg.png');
+    background: linear-gradient(to bottom,  rgb(245, 187, 145)) 30%,  rgb(213, 211, 204) 200%;
     padding: 1.5rem;
     overflow: hidden;
 }
@@ -138,13 +140,12 @@ footer {
     text-align: center;
     margin: 20px;
 }
-
-warna {
-    color: var(--white-color);
+color {
+    color: var(--first-color);
 }
 
 span {
-    color: var(--white-color);
+    color: var(--second-color);
     margin-top: auto;
 }
 
@@ -180,7 +181,7 @@ body {
 }
 
 .overlay-content {
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(9, 8, 8, 0.5);
     padding: 20px;
     border-radius: 5px;
     text-align: center;
@@ -194,7 +195,7 @@ body {
 
 .overlay-content p {
     font-family: var(--head-font); 
-    color: var(--white-color);
+    color: var(--second-color);
 }
 
 .book {
@@ -206,7 +207,7 @@ body {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     font-family: var(--head-font); 
-    color: var(--white-color);
+    color: var(--third-color);
 }
 
 .book h3 {
@@ -218,11 +219,11 @@ body {
     max-width: 25px; 
     max-height: 25px; 
     border-radius: 50%; 
-    color: var(--white-color);
+    color: var(--fourth-color);
 }
 
 .info-container alt {
-    color: var(--white-color);
+    color: var(--first-color);
 }
 
 span2 {
@@ -239,7 +240,7 @@ section.about {
 .action-btn {
     display: inline-block;
     text-decoration: none;
-    color: white;
+    color: rgb(236, 196, 148);
     font-weight: 700;
     background: var(--first-color);
     padding: 0.5em 2em;

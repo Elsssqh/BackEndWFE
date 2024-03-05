@@ -35,4 +35,9 @@ angular.module('bookApp', [])
             // Remove the item from the trolley
             $scope.trolleyItems.splice(index, 1);
         };
+
+        $scope.toggleMenu = function (){
+            var navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        };
     });
