@@ -31,14 +31,14 @@ section.landing {
 }
 
 .wrapper {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)), url(asset/gradienbg.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)), url(asset/backgr.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
 .landing-img img {
-    max-width: 450px;
+    max-width: 460px;
     height: auto;
     width: auto;
 }
@@ -97,11 +97,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-<<<<<<< HEAD
-  background-color: #fec89a;
-=======
   background-color: #802570;
->>>>>>> 9cfc24dc34a09c91a11d00fb2cbeb125454e48bf
   color: white;
   padding: 16px 20px;
   border: none;
