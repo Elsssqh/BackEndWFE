@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../UASSSFE/asset/logoUASFE.png">
-    <title>PagePetal Sroe</title>
+    <title>PagePetal Store</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://kit.fontawesome.com/8f441d49ca.js" crossorigin="anonymous"></script>
 </head>
@@ -16,7 +16,7 @@
     <header class="sticky">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand " href="#">PagePetal Store</a>
+                <a class="navbar-brand " href="home.html">PagePetal Store</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -58,9 +58,12 @@
                 </select>
                 <br>
                 <center><button ng-click="searchBooks()">Search</button></center>
+            </div>
             </form>
+            
             <ul id="bookList">
                 <li ng-repeat="book in books">
+                    <div class="container">
                     <img ng-src="{{book.thumbnail}}" alt="{{book.title}} Cover">
                     <h3>{{book.title}}</h3>
                     <p>{{book.authors.join(', ')}}</p>
