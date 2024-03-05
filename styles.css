@@ -5,10 +5,10 @@
     --header-height: 3rem;
 
     /*===== Color Palette =====*/
-    --first-color: rgb(246, 164, 252);
-    --second-color: #c157aa;
-    --third-color: #a83e91; 
-    --white-color: #FCF8F8;
+    --first-color: rgb(10, 8, 10);
+    --second-color: #e0b36b;
+    --third-color: #c25e24; 
+    --fourth-color: #a36a6a;
     
     /*===== Font and typography =====*/
     --big-font: 'Courgette';
@@ -20,7 +20,7 @@
 
 body {
     font-family: 'Courgette', sans-serif;
-    background-image: url('asset/background\ \(2\).jpg');
+    background-image: url('asset/gradienbg.png');
     background-repeat: no-repeat;
     background-position: right top;
 }
@@ -44,7 +44,7 @@ header.sticky {
 }
 
 .navbar {
-    background-image: url('asset/background\ \(2\).jpg') !important;
+    background-image: url('asset/grbg2.png') !important;
     background-repeat: no-repeat;
     background-position: right top;
 }
