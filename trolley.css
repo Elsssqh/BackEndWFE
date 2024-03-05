@@ -32,10 +32,11 @@ header.sticky {
 }
 
 body {
-    background-image: url('asset/background\ \(2\).jpg');
+    background-image: url('asset/gradienbg.png');
     background-repeat: no-repeat;
     background-position: right top;
-    color: var(--white-color);
+    background-size: cover;
+    color: var(--third-color);
 }
 
 
