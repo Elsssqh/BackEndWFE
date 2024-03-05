@@ -20,11 +20,13 @@
             <img src="asset/PagePetal.png" alt="logo">
         </div>
 
+        <!--
         <div class="button">
             <a href="home.html" class="btn"><img src="asset/PagePetal.png" alt="logo"></a> 
             
         </div>
-    
+     -->
+     
     </section>
 
     <footer>
@@ -40,7 +42,7 @@
 
 
     <!-- Ini login page dan sign in page-->
-    <button class="open-button" onclick="openForm()">Open Form</button>
+    <button class="open-button" onclick="openForm()">Login</button>
   <div class="form-popup" id="myForm">
   <form onsubmit="return validateLogin()" class="form-container">
     <h1>Login</h1>
@@ -77,15 +79,63 @@
       
       // Redirect to home.html
       window.location.href = "home.html";
-      
       return false; // Prevent form submission (not necessary as we're redirecting)
+
     } else {
       alert("Invalid email or password. Please try again.");
       return false; // Prevent form submission
     }
   }
+
 </script>
 
-    
+
+  <button class="open-button" onclick="openForm()"><span>Login</span></button>
+  <div class="form-popup" id="myForm">
+  <form onsubmit="return validateLogin()" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+  function validateLogin() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("psw").value;
+
+    // Check if email and password match the desired values
+    if (email === "pagepetal@gmail.com" && password === "pagepetal") {
+      alert("Login successful!");
+      
+      // Redirect to home.html
+      window.location.href = "home.html";
+      return false; // Prevent form submission (not necessary as we're redirecting)
+
+    } else {
+      alert("Invalid email or password. Please try again.");
+      return false; // Prevent form submission
+    }
+  }
+
+</script>
+
 </body>
 </html>

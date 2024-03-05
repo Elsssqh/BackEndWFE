@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -17,11 +19,20 @@ section.landing {
 }
 
 :root {
-    --first-color: rgb(246, 164, 252);
-    --second-color: #c157aa;
-    --third-color: #a83e91; 
-    --white-color: #FCF8F8;
-    --black-color:  #000000;
+  --header-height: 3rem;
+
+  /*===== Color Palette =====*/
+  --first-color: rgb(10, 8, 10);
+  --second-color: #e0b36b;
+  --third-color: #c25e24; 
+  --fourth-color: #a36a6a;
+  --white-color:  #ffffff;
+  
+  /*===== Font and typography =====*/
+  --big-font: 'Courgette';
+  --head-font: 'sans-serif';
+  --big-font-size: 2.5rem;
+  --normal-font-size: .938rem;
 }
 
 .wrapper {
@@ -92,13 +103,13 @@ footer {
 
 
 /*LOGIN FORM --WIDY*/
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family:'Courgette', sans-serif;}
 * {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-  background-color: #802570;
-  color: white;
+  background-color: var(--fourth-color);
+  color: var(--white-color);
   padding: 16px 20px;
   border: none;
   cursor: pointer;
@@ -107,6 +118,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   bottom: 23px;
   right: 28px;
   width: 280px;
+  border-radius: 12px; 
 }
 
 /* The popup form - hidden by default */
@@ -143,7 +155,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #d223f9;
+  background-color: var(--fourth-color);
   color: white;
   padding: 16px 20px;
   border: none;
@@ -153,12 +165,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
   opacity: 0.8;
 }
 
+span {
+  font-family: 'Courgette', sans-serif;
+}
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: rgb(231, 104, 236);
+  background-color: var(--fourth-color);
 }
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+
