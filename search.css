@@ -21,9 +21,10 @@
 body {
     font-family: 'Courgette', sans-serif;
     background-image: url('asset/gradienbg.png');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: right top;
     background-size: cover;
+    height: 900px;
 }
 
 .container {
