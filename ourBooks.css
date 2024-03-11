@@ -33,11 +33,11 @@ header.sticky {
 
 body {
     background-image: url('asset/grbg2.png');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: right top;
     background-color: cover;
     width: auto;
-    height: 100vh;
+    height: 900px;
 }
 
 #bookshelf {
