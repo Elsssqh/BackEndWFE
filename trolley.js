@@ -6,7 +6,7 @@ angular.module('bookApp', [])
 // Define the controller for the trolley
 .controller('TrolleyController', function($scope, $http) {
     // Fetch trolley items data from bookapi.js
-    $http.get('bookAPI.js')
+    $http.get('BookAPI.js')
         .then(function(response) {
             // Assign the fetched data to $scope.trolleyItems
             $scope.trolleyItems = response.data.map(function(item) {
