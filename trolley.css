@@ -36,6 +36,7 @@ body {
     background-position: right top;
     background-size: cover;
     color: var(--third-color);
+    height: 900px;
 }
 
 
