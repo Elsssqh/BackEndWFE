@@ -13,14 +13,14 @@
 </head>
 
 <body ng-controller="TrolleyController">
-
+    
     <header class="sticky">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand " href="home.html">PagePetal Store</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon" ng-click="toggleMenu()"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav ms-auto">
@@ -37,8 +37,8 @@
                             <li class="nav-item ">
                                 <a class="nav-link active" aria-current="page" href="search.html">Search</a>
                             </li>
-                            <li class="button ">
-                                <a href="trolley.html" class="btn"><img src="asset/shopp.png" alt="logo"></a>
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="trolley.html">Trolley</a>
                             </li>
                         </ul>
                         
@@ -62,7 +62,7 @@
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="trolley.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

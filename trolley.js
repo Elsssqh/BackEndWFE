@@ -9,7 +9,7 @@ angular.module('bookApp', [])
         // Function to add a book to the trolley
         $scope.addToTrolley = function (book) {
             // Check if the book is already in the trolley
-            var index = $scope.trolleyItems.findIndex(item => item.title === book.title);
+           var index = $scope.trolleyItems.findIndex(item => item.title === book.title);
 
             if (index === -1) {
                 // If not, add it to the trolley
@@ -25,19 +25,19 @@ angular.module('bookApp', [])
 
             // Update the total price
             $scope.totalPrice += book.price;
-        };
+       };
 
         // Function to remove a book from the trolley
         $scope.removeFromTrolley = function (index) {
-            // Subtract the price based on the quantity
-            $scope.totalPrice -= $scope.trolleyItems[index].price * $scope.trolleyItems[index].quantity;
+           // Subtract the price based on the quantity
+           $scope.totalPrice -= $scope.trolleyItems[index].price * $scope.trolleyItems[index].quantity;
 
             // Remove the item from the trolley
-            $scope.trolleyItems.splice(index, 1);
-        };
+           $scope.trolleyItems.splice(index, 1);
+       };
 
         $scope.toggleMenu = function (){
-            var navbar = document.querySelector('.navbar');
+            var navbar = document.querySelector('#navbarNav');
             navbar.classList.toggle('active');
-        };
-    });
+       };
+  });
