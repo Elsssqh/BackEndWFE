@@ -37,14 +37,24 @@ angular.module('bookApp', [])
             document.getElementById('overlay').style.display = 'flex';
         };
 
-        $scope.addToTrolley = function (book) {
-            // Implement logic to add the book to the trolley
-            // For demonstration, I'm using an array to store trolley items
+        $scope.addToTrolley = function (bookData) {
+            // Create a book object with the required properties
+            var book = {
+                title: bookData.title,
+                price: bookData.price,
+                quantity: 1 // You can set the initial quantity as per your requirement
+            };
+        
+            // Initialize the trolleyItems array if it's not already initialized
             $scope.trolleyItems = $scope.trolleyItems || [];
+        
+            // Add the book to the trolley
             $scope.trolleyItems.push(book);
+        
             console.log('Added to Trolley:', book);
             alert('Book added to Trolley!');
         };
+        
 
         $scope.hideBookDetails = function () {
             $scope.selectedBook = null;
