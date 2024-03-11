@@ -49,8 +49,34 @@
     </header>
 
     <section class="items" id="items">
-        <div class="cart-items" id="trolleyItems">
-            <!-- Trolley items will be displayed here -->
+        <div id="trolleyItems">
+            <div class="container mt-4 rounded">
+                <h2>Your Shopping Trolley</h2>
+                <table id="trolleyTable" class="table">
+                  <thead>
+                    <tr >
+                      <th class="p-2">Title</th>
+                      <th class="p-2">Price</th>
+                      <th class="p-2">Quantity</th>
+                      <th class="p-2">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Trolley items will be added here dynamically -->
+                    <tfoot>
+                          <td colspan="3" class="text-end">Total Price:</td>
+                          <td id="totalPrice"></td>
+                        </tr>
+                      </tfoot>
+                  </tbody>
+                </table>
+                <div class="text-end mt-3">
+                    <button id="payButton" class="btn btn-primary rounded" data-bs-toggle="modal" data-bs-target="#exampleModal">PAY</button>
+                  </div>
+              </div>
+
+        <!-- <div class="cart-items" id="trolleyItems">
+             Trolley items will be displayed here 
             <div ng-repeat="(index, item) in trolleyItems">
                 <span>{{item.title}} - Quantity: {{item.quantity}} - Price: ${{item.price}}</span>
                 <span class="remove-item" ng-click="removeFromTrolley(index)">Remove</span>
@@ -58,11 +84,12 @@
         </div>
         <div class="total-price">
             Total Price: $<span>{{totalPrice}}</span>
-        </div>
+        </div> -->
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="script.js"></script>
+    <script src="path/to/bootstrap.bundle.min.js"></script>
+    <script src="trolley.js"></script>
 
 </body>
 

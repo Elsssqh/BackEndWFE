@@ -131,3 +131,10 @@ body {
 #totalPrice {
     font-weight: bold;
 }
+
+#payButton {
+    background-color: #e69452b4;
+    color: white;
+    font-size: 16px;
+    border:none;
+}
