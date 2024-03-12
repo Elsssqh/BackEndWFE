@@ -1,43 +1,47 @@
-// script.js
+// trolley.js
 
+// Define the AngularJS module
 angular.module('bookApp', [])
-    .controller('TrolleyController', function ($scope) {
-        // Initialize trolleyItems and totalPrice
-        $scope.trolleyItems = [];
-        $scope.totalPrice = 0;
 
-        // Function to add a book to the trolley
-        $scope.addToTrolley = function (book) {
-            // Check if the book is already in the trolley
-           var index = $scope.trolleyItems.findIndex(item => item.title === book.title);
+// Define the controller for the trolley
+.controller('TrolleyController', function($scope, $http) {
+    // Fetch trolley items data from bookapi.js
+    $http.get('BookAPI.js')
+        .then(function(response) {
+            // Assign the fetched data to $scope.trolleyItems
+            $scope.trolleyItems = response.data.map(function(item) {
+                return {
+                    title: item.title,
+                    price: item.price,
+                    quantity: item.quantity
+                };
+            });
 
-            if (index === -1) {
-                // If not, add it to the trolley
-                $scope.trolleyItems.push({
-                    title: book.title,
-                    quantity: 1,  // Initial quantity is 1
-                    price: book.price  // Assuming 'price' is the property from the API
-                });
-            } else {
-                // If yes, increase the quantity
-                $scope.trolleyItems[index].quantity++;
-            }
+            // Initialize totalPrice variable to store total price
+            $scope.totalPrice = 0;
 
-            // Update the total price
-            $scope.totalPrice += book.price;
-       };
+            // Function to remove item from the trolley
+            $scope.removeFromTrolley = function(index) {
+                // Remove the item from the trolley
+                $scope.trolleyItems.splice(index, 1);
 
-        // Function to remove a book from the trolley
-        $scope.removeFromTrolley = function (index) {
-           // Subtract the price based on the quantity
-           $scope.totalPrice -= $scope.trolleyItems[index].price * $scope.trolleyItems[index].quantity;
+                // Recalculate total price
+                $scope.calculateTotalPrice();
+            };
 
-            // Remove the item from the trolley
-           $scope.trolleyItems.splice(index, 1);
-       };
+            // Function to calculate total price
+            $scope.calculateTotalPrice = function() {
+                $scope.totalPrice = 0;
+                // Iterate through trolley items and calculate total price
+                for (var i = 0; i < $scope.trolleyItems.length; i++) {
+                    $scope.totalPrice += $scope.trolleyItems[i].price * $scope.trolleyItems[i].quantity;
+                }
+            };
 
-        $scope.toggleMenu = function (){
-            var navbar = document.querySelector('#navbarNav');
-            navbar.classList.toggle('active');
-       };
-  });
+            // Call the calculateTotalPrice function initially to calculate total price
+            $scope.calculateTotalPrice();
+        })
+        .catch(function(error) {
+            console.error('Error fetching trolley data:', error);
+        });
+});

@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/8f441d49ca.js" crossorigin="anonymous"></script>
 </head>
 
-<body ng-controller="TrolleyController">
+<body ng-controller="TrolleyController" ng-init="trolleyItems = bookData">
     
     <header class="sticky">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -26,7 +26,7 @@
                     <div class="navbar-nav ms-auto">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="landing.html">Home</a>
+                                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="home.html">About</a>
@@ -37,8 +37,8 @@
                             <li class="nav-item ">
                                 <a class="nav-link active" aria-current="page" href="search.html">Search</a>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link active" aria-current="page" href="trolley.html">Trolley</a>
+                            <li class="button ">
+                                <a href="trolley.html" class="btn"><img src="asset/shopp.png" alt="logo"></a>
                             </li>
                         </ul>
                         
@@ -53,23 +53,30 @@
             <div class="container mt-4 rounded">
                 <h2>Your Shopping Trolley</h2>
                 <table id="trolleyTable" class="table">
-                  <thead>
-                    <tr >
-                      <th class="p-2">Title</th>
-                      <th class="p-2">Price</th>
-                      <th class="p-2">Quantity</th>
-                      <th class="p-2">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Trolley items will be added here dynamically -->
+                    <thead>
+                      <tr >
+                        <th class="p-2">Title</th>
+                        <th class="p-2">Price</th>
+                        <th class="p-2">Quantity</th>
+                        <th class="p-2">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Trolley items will be added here dynamically -->
+                      <tr ng-repeat="item in trolleyItems">
+                          <td>{{item.title}}</td>
+                          <td>${{item.price}}</td>
+                          <td>{{item.quantity}}</td>
+                          <td><button class="btn btn-danger" ng-click="removeFromTrolley($index)">Remove</button></td>
+                      </tr>
+                    </tbody>
                     <tfoot>
+                      <tr>
                           <td colspan="3" class="text-end">Total Price:</td>
-                          <td id="totalPrice"></td>
-                        </tr>
-                      </tfoot>
-                  </tbody>
-                </table>
+                          <td>${{totalPrice}}</td>
+                      </tr>
+                    </tfoot>
+                  </table>
                 <div class="text-end mt-3">
                     <button id="payButton" class="btn btn-primary rounded" data-bs-toggle="modal" data-bs-target="#exampleModal">PAY</button>
                   </div>
@@ -90,7 +97,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="path/to/bootstrap.bundle.min.js"></script>
     <script src="trolley.js"></script>
-
+    <script src="BookAPI.js"></script>
 </body>
 
 </html>
