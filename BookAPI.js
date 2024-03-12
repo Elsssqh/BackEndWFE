@@ -1,4 +1,4 @@
-// script-angular.js
+// BookAPI.js
 
 angular.module('bookApp', [])
     .controller('BookController', function ($scope, $http) {
