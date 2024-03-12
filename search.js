@@ -4,6 +4,7 @@ angular.module('bookApp', [])
     .controller('BookController', function ($scope, $http) {
         $scope.books = [];
         $scope.searchQuery = '';
+        $scope.bodyHeight = '900px'; // Set default height
 
         $scope.searchBooks = function () {
             // Check if the search query is not empty
@@ -24,6 +25,9 @@ angular.module('bookApp', [])
                                     thumbnail: item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : 'no-image.jpg'
                                 };
                             });
+
+                            // Update body height based on the number of books
+                            $scope.bodyHeight = ($scope.books.length * 415) + 'px';
                         } else {
                             console.error('Error fetching book data.');
                         }
@@ -35,4 +39,12 @@ angular.module('bookApp', [])
                 console.warn('Empty search query.');
             }
         };
+    });
+
+
+    window.addEventListener('resize', function() {
+        var height = window.innerHeight;
+        if (height > 5000) {
+            document.getElementById('search').style.height = height + 'px';
+        }
     });
