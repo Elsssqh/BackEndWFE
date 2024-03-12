@@ -23,6 +23,7 @@
     --normal-font-size: .938rem;
 }
 
+
 header.sticky {
     position: flex;
     width: 100%;
@@ -116,12 +117,15 @@ h3 {
 
 
 footer {
+    width: auto;
     color: var(--second-color);
     text-align: center;
     background-image: url('asset/footerbg.png');
     background: linear-gradient(to bottom,  rgb(245, 187, 145)) 30%,  rgb(213, 211, 204) 200%;
     padding: 1.5rem;
     overflow: hidden;
+    border: none;
+        
 }
 
 .contact {
@@ -155,6 +159,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    height: 1500px;
 }
 
 #bookshelf {
